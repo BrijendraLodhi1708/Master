@@ -1,5 +1,6 @@
-Public Main{
+public Main{
    public static void method1(){
+    //change has done
      return;
    }
 }
