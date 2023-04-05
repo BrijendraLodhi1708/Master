@@ -1,0 +1,39 @@
+<template>
+    <lightning-card class="slds-p-around_medium">
+    <c-childs-component></c-childs-component>
+    
+    <lightning-combobox
+    name="Account Type"
+    label='Enter Account Type'
+    value={value}
+    placeholder='Enter Account Type'
+    options={accountType}
+    onchange={handleComboboxChange}
+   ></lightning-combobox>
+   {value}
+   <lightning-combobox
+    name="Account Industry"
+    label='Enter Account Industry'
+    value={value}
+    placeholder='Enter Account Industry'
+    options={accountIndustry}
+    onchange={handleComboboxChange1}
+   ></lightning-combobox>
+ 
+   <lightning-button label="Save Account" onclick={createAccount}></lightning-button>
+   <lightning-button label="Display Account" onclick={displayAccount}></lightning-button>
+
+     <template if:true={flag}>
+      <lightning-datatable
+      data={accounts}
+         key-field="id"
+         columns={fields}>
+         
+        </lightning-datatable>
+    </template>
+
+  
+
+</lightning-card>
+    
+</template>
